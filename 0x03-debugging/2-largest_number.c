@@ -1,9 +1,24 @@
-#include"main.h"
-int largest_number(int a,int b,int c)
+#include <stdio.h>
+
+/**
+* main - causes an infinite loop
+* Return: 0
+*/
+
+int main(void)
 {
-int largest;if(a>b&&a>c){largest=a;}
-else if(a>b&&c>a){largest=c;}
-else if(b>c){largest=b;}
-else{largest=c;}
-return(largest);
+	int i;
+
+	printf("Infinite loop incoming :(\n");
+
+	i = 0;
+
+	/*while (i < 10) */
+	/*{ */
+	/*      putchar(i);*/
+	/*} */
+
+	printf("Infinite loop avoided! \\o/\n");
+
+	return (0);
 }
