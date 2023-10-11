@@ -1,25 +1,39 @@
-#ifndef _CALC_H_
-#define _CALC_H_
-
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
- * struct op - Struct op
+ * main - check the code for Holberton School students.
+ * @argc: argument count.
+ * @argv: argument vector.
  *
- * @op: The operator
- * @f: The function associated
+ * Return: Always 0.
  */
-typedef struct op
+int main(int argc, char *argv[])
 {
-	char *op;
-	int (*f)(int a, int b);
-} op_t;
+	char *opc = (char *) main;
+	int i, nbytes;
 
-int op_add(int a, int b);
-int op_sub(int a, int b);
-int op_mul(int a, int b);
-int op_div(int a, int b);
-int op_mod(int a, int b);
-int (*get_op_func(char *s))(int, int);
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
 
-#endif
+	nbytes = atoi(argv[1]);
+
+	if (nbytes < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+
+	for (i = 0; i < nbytes; i++)
+	{
+		printf("%02x", opc[i] & 0xFF);
+		if (i != nbytes - 1)
+			printf(" ");
+	}
+
+	printf("\n");
+	return (0);
+}
