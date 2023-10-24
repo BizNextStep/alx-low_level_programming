@@ -1,7 +1,5 @@
 #include "lists.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * sum_listint - returns the sum of all the data (n) of a listint_t linked list
@@ -12,12 +10,8 @@
 int sum_listint(listint_t *head)
 {
 	int sum = 0;
-	listint_t *current;
+	listint_t *current = head;
 
-	if (head == NULL)
-	return (0);
-
-	current = head;
 	while (current != NULL)
 	{
 		sum += current->n;
