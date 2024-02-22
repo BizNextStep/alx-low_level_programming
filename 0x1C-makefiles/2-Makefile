@@ -1,0 +1,14 @@
+CC = gcc
+SRC := main.c school.c
+NAME := school
+
+%.o: %.c
+    $(CC) -c -o $@ $<
+
+all: $(NAME)
+$(NAME): $(addprefix obj/,$(basename $(SRC)))
+    @echo "[Building $@]"
+    $(CC) -o $@ $(obj/)*.o
+
+clean:
+    rm -rf *.o $(NAME)
