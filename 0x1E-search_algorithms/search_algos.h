@@ -18,7 +18,18 @@ typedef struct search_node_s
     struct search_node_s *next;
 } search_node_t;
 
-int linear_search(search_node_t *array, size_t size, int value);
+/**
+ * linear_search - Searches for a value in an array of integers
+ *                  using the Linear search algorithm
+ * @array: Pointer to the first element of the array to search in
+ * @size: Number of elements in array
+ * @value: Value to search for
+ *
+ * Return: The first index where value is located, or -1 if value is not
+ *         present in array or if array is NULL
+ */
+int linear_search(int *array, size_t size, int value);
+
 int binary_search(search_node_t *array, size_t size, int value);
 int jump_search(search_node_t *array, size_t size, int value);
 int interpolation_search(search_node_t *array, size_t size, int value);
