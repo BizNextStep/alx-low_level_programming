@@ -27,7 +27,7 @@ typedef struct search_node_s
  *
  * Return: The first index where value is located, or -1 if value is not
  *         present in array or if array is NULL
- */i
+ */
 int linear_search(int *array, size_t size, int value);
 int binary_search(int *array, size_t size, int value);
 int jump_search(search_node_t *array, size_t size, int value);
